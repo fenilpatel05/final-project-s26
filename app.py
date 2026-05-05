@@ -12,7 +12,7 @@ def home():
     )
 
     return f"""
-    <h1>Simple Notes App</h1>
+    <h1>My Notes App</h1>
 
     <form action="/add" method="post">
         <input name="note" placeholder="Enter a note" required>
