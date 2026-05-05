@@ -1,5 +1,5 @@
 provider "google" {
-  project = "YOUR_PROJECT_ID"
+  project = "my-devops-489815"
   region  = "us-central1"
   zone    = "us-central1-a"
 }
@@ -24,7 +24,7 @@ resource "google_compute_instance" "vm_instance" {
     apt update
     apt install -y docker.io git
     systemctl start docker
-    git clone YOUR_GITHUB_REPO_LINK /home/app
+    git clone https://github.com/fenilpatel05/final-project-s26.git /home/app
     cd /home/app
     docker build -t notes-app .
     docker run -d -p 5001:5001 notes-app
